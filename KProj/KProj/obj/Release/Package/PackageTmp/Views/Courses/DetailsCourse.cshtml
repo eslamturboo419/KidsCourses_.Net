@@ -1,0 +1,110 @@
+﻿@model KProj.Models.Classes.Cours
+
+@{
+    ViewBag.Title = "DetailsCourse";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+
+<div class="container" style="margin-top: 94px; margin-bottom:40px;">
+
+    <div>
+        <h4>Cours</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NameOfCourse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NameOfCourse)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TimeOfCourse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TimeOfCourse)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+
+                <img src="~/Content/ImageUploaded/@Model.Image" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Trainer)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Trainer)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TypeCourse)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TypeCourse)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Show Videos", "ShowVideos", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+
+    <div>
+
+
+        <script>
+
+            $(document).ready(function () {
+                Here();
+            });
+
+
+            function Here() {
+                $("#rateYo").rateYo({
+                    rating: 0,
+                    numStars: 5,
+                    maxValue: 5,
+                    halfStar: true,
+                    onChange: function (rating, rateYoInstance) {
+
+                        $("#rating").val(rating);
+                    }
+
+                });
+
+            }
+
+
+        </script>
+
+
+        @using (Html.BeginForm("Review", "Courses", FormMethod.Post))
+        {
+            <div id="rateYo"></div>
+            <input type="hidden" id="rating" name="rating" />
+            <input type="hidden" name="CourseId" value="@Model.Id" />
+            <input type="submit" value="Review" />
+
+        }
+
+        <p class="text-danger" style="font-size:30px"> @Html.ValidationMessage("ErrorAganin")  </p>
+
+    </div>
+
+</div>

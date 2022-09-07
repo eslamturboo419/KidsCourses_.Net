@@ -1,0 +1,135 @@
+﻿@model KProj.Models.GmailClass
+
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div class="courses-show">
+    <div id="particles-js"></div>
+
+    <div class="show-content">
+        <div class="container">
+            <h3>
+                Contact Us
+            </h3>
+            <ul class="content-nav">
+                <li>
+                    <a href="#" target="_self"  onclick='document.location ="@Url.Action("Index","Home" )"' >
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa fa-long-arrow-right"></i> Contact Us
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Courses Show -->
+<!-- contact Page -->
+<div class="contact-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-12">
+
+                <div class="contact-page-info d-flex">
+                    <span>
+                        <i class="fa fa-send-o"></i>
+                    </span>
+                    <div class="contact-page-details">
+                        <h3>Office Location</h3>
+                        <p>FCI Zagazig University</p>
+                    </div>
+                </div>
+
+                <div class="contact-page-info d-flex">
+                    <span>
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <div class="contact-page-details">
+                        <h3>Contact E-Mail</h3>
+                        <p>Mbdalzym376@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-page-info d-flex">
+                    <span>
+                        <i class="fa fa-phone"></i>
+                    </span>
+                    <div class="contact-page-details">
+                        <h3>Contact Number</h3>
+                        <p>+02 01007449298</p>
+                    </div>
+                </div>
+
+
+                <div class="contact-page-info d-flex">
+                    <span>
+                        <i class="fa fa-tv"></i>
+                    </span>
+                    <div class="contact-page-details">
+                        <h3>Our Website</h3>
+                        <p>www.azima.com</p>
+                    </div>
+                </div>
+
+            </div><!-- End Column -->
+
+            <div class="col-md-8 col-12">
+
+                <div class="contact-page-title">
+                    <h3>Have any Questions?</h3>
+                    <p>
+                        I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                    </p>
+                </div>
+                @using (Html.BeginForm())
+    { 
+                @Html.AntiForgeryToken()
+
+                @*<form action="" enctype="multipart/form-data" name="">*@
+
+                    <div class="form-name">
+                        <div class="row">
+                            <div class="col-md-6 col-12 ">
+                                @*<input type="text" placeholder="First Name">*@
+                                @Html.EditorFor(model => model.FName, new { htmlAttributes = new { @class = " " , placeholder = "First Name" } })
+                            </div>
+                            <div class="col-md-6 col-12 pt-4 pt-sm-0">
+                                @*<input type="text" placeholder="Last Name">*@
+                                @Html.EditorFor(model => model.LName, new { htmlAttributes = new { @class = " " , placeholder = "Last Name" } })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-email">
+                        @*<input type="email" placeholder="Email">*@
+                        @Html.EditorFor(model => model.YourEmail, new { htmlAttributes = new { @class = " " , placeholder = "Email" } })
+                    </div>
+
+                    <div class="form-message">
+                        @*<textarea placeholder="Message"></textarea>*@
+                        @Html.TextAreaFor(model => model.Message, htmlAttributes: new { @class = " ", placeholder = "Enter Your Message" })
+
+                    </div>
+
+                    <div class="form-button mr-auto mx-auto">
+                        <input type="submit" value="Submit">
+                    </div>
+                @*</form>*@
+                }
+            </div>
+        </div>
+    </div><!-- End Container -->
+</div>
+<!-- End Contact Page -->
+<!-- Loader -->
+<div class="preloader" id="preloader">
+    <div class="loader loader-1">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+</div>

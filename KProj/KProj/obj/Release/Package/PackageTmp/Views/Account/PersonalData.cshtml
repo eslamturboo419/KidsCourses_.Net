@@ -1,0 +1,221 @@
+﻿@model KProj.Models.PersonalDataEdit
+
+@{
+    ViewBag.Title = "PersonalData";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+
+
+<div class="courses-show">
+    <div id="particles-js"></div>
+
+    <div class="show-content">
+        <div class="container">
+            <h3>
+                All Settings
+            </h3>
+            <ul class="content-nav">
+                <li>
+                    <a href="#" target="_self" onclick='document.location ="@Url.Action("Register","LoginSignUp" )"'>
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa fa-long-arrow-right"></i> Settings
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Courses Show -->
+
+
+<div class="change-settings">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li class="nav-item">
+                        <a href="#personal-settings" aria-controls="personal-settings" class="active show" role="tab" data-toggle="tab">
+                            Personal Settings
+                        </a>
+                    </li>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">
+                            Change Password
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-8 col-12">
+                <div class="tab-content">
+
+                    <div class="tab-pane fade active show" role="tabpanel" id="personal-settings">
+                        <div class="col-12">
+                            <div class="settings-title">
+
+                                @if (TempData["meas"] != null)
+                                {
+                                    <p class="alert alert-success "> @TempData["meas"]  </p>
+                                }
+                                else
+                                {
+                                    <p> Edit Your Personal Settings </p>
+                                }
+
+
+                            </div>
+                            <div class="personal-settings">
+                                @*<form name="" action="" enctype="multipart/form-data">*@
+                                @using (Html.BeginForm("DataEdit", "Account", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.HiddenFor(model => model.HiddenString)
+                                    @Html.HiddenFor(model => model.id)
+                                    @*@Html.HiddenFor(model => Model.OldPassword)
+                                        @Html.HiddenFor(model => Model.NewPassword)
+                                        @Html.HiddenFor(model => Model.ConfirmPassword)*@
+
+                                    <div class="full-name">
+                                        <label>First  Name</label>
+                                        @*<input type="text" placeholder="Full Name" name="">*@
+                                        @Html.EditorFor(model => model.F_Name, new { htmlAttributes = new { @class = "", placeholder = "First Name" } })
+
+                                    </div>
+
+                                    <div class="username">
+                                        <label>Last Name</label>
+                                        @*<input type="text" placeholder="User Name" name="">*@
+                                        @Html.EditorFor(model => model.L_Name, new { htmlAttributes = new { @class = "", placeholder = "Last Name" } })
+
+                                    </div>
+
+
+                                    @*<div class="nickname">
+                                            <label>Title</label>
+                                            <input type="text" placeholder="Nick Name" name="">
+                                        </div>*@
+
+                                    <div class="email">
+                                        <label>Email</label>
+                                        @*<input type="email" placeholder="E-mail" name="">*@
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "", placeholder = "E-mail", @readonly = "readonly" } })
+
+                                    </div>
+
+                                    <div class="email">
+                                        <label>Address</label>
+                                        @*<input type="text" placeholder="Address" name="">*@
+                                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "", placeholder = "Address" } })
+
+                                    </div>
+
+                                    <div class="birthday">
+                                        <label>Birthday</label>
+                                        @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { id = "yourdatepicker",   @class = "" } })
+
+
+                                    </div>
+
+                                    <div class="button-submit">
+                                        <input type="submit" value="Update Information">
+                                    </div>
+                                    @*</form>*@
+                                }
+                            </div><!-- End personal Settings -->
+                        </div><!-- End Column -->
+                    </div>
+
+
+
+
+
+
+                    <div class="tab-pane fade" role="tabpanel" id="change-password">
+                        <div class="col-12">
+                            <div class="settings-title">
+                                Change Password
+                            </div>
+                            <div class="personal-settings">
+                                @*<form name="" action="" enctype="multipart/form-data">*@
+                                @using (Html.BeginForm("DataPassword", "Account", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.HiddenFor(model => model.id)
+
+                                    <div class="current">
+                                        <label>Current Password</label>
+                                        @*<input type="text" placeholder="Current Password" name="">*@
+                                        @Html.EditorFor(model => model.OldPassword, new { htmlAttributes = new { @class = "", placeholder = "Current Password" } })
+
+                                    </div>
+
+                                    <div class="new">
+                                        <label>New Password</label>
+                                        @*<input type="text" placeholder="New Password" name="">*@
+                                        @Html.EditorFor(model => model.NewPassword, new { htmlAttributes = new { @class = " ", placeholder = "New Password" } })
+
+                                    </div>
+
+
+                                    <div class="confirm-new">
+                                        <label>Confirm New Password</label>
+                                        @*<input type="text" placeholder="Confirm New Password" name="">*@
+                                        @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = " ", placeholder = "Confirm New Password" } })
+
+                                    </div>
+
+                                    <div class="button-submit">
+                                        <input type="submit" value="Save & Update">
+                                    </div>
+                                }
+                                @*</form>*@
+                            </div><!-- End personal Settings -->
+                        </div><!-- End Column -->
+                    </div>
+
+                </div><!-- End tab Content -->
+            </div>
+        </div><!-- End Row -->
+    </div><!-- End Container -->
+</div>
+
+<!-- Loader -->
+
+<div class="preloader" id="preloader">
+    <div class="loader loader-1">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+</div>
+
+<script src="~/Content/Assets/Js/jquery-3.3.1.js"></script>
+<link href="~/Content/Assets/datepicker/datepicker.min.css" rel="stylesheet" />
+<script>
+
+    $(document).ready(function () {
+        Here();
+    });
+
+    function Here() {
+        $('#yourdatepicker').datepicker();
+    }
+
+
+</script>
+
+
+

@@ -1,0 +1,153 @@
+E:\MoreProject\KidsCourses\KProj\KProj\bin\ApplicationInsights.config
+E:\MoreProject\KidsCourses\KProj\KProj\bin\KProj.dll.config
+E:\MoreProject\KidsCourses\KProj\KProj\bin\KProj.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\KProj.pdb
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\EntityFramework.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.Agent.Intercept.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.Web.Infrastructure.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Helpers.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Mvc.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Optimization.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Razor.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\WebGrease.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\EntityFramework.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Helpers.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Mvc.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Optimization.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.Razor.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.pdb
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.xml
+E:\MoreProject\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CoreCompileInputs.cache
+E:\MoreProject\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CopyComplete
+E:\MoreProject\KidsCourses\KProj\KProj\obj\Debug\KProj.dll
+E:\MoreProject\KidsCourses\KProj\KProj\obj\Debug\KProj.pdb
+E:\MoreProject\KidsCourses\KProj\KProj\bin\PagedList.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\PagedList.Mvc.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\PagedList.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\PagedList.Mvc.xml
+E:\MoreProject\KidsCourses\KProj\KProj\bin\ImageResizer.dll
+E:\MoreProject\KidsCourses\KProj\KProj\bin\ImageResizer.xml
+E:\MoreProject\KidsCourses\KProj\KProj\obj\Debug\KProj.csprojAssemblyReference.cache
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.AssemblyReference.cache
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CoreCompileInputs.cache
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\obj\Debug\KProj.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\obj\Debug\KProj.pdb
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\ApplicationInsights.config
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\KProj.dll.config
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\KProj.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\KProj.pdb
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\EntityFramework.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\ImageResizer.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.Agent.Intercept.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.Web.Infrastructure.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\PagedList.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\PagedList.Mvc.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Helpers.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Mvc.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Optimization.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Razor.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\WebGrease.dll
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\EntityFramework.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\ImageResizer.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\PagedList.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\PagedList.Mvc.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Helpers.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Mvc.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Optimization.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.Razor.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.pdb
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.xml
+E:\BackEnd___Organize it\Second\last\More Project\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CopyComplete
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\ApplicationInsights.config
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\KProj.dll.config
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\KProj.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\KProj.pdb
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\EntityFramework.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\ImageResizer.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.Agent.Intercept.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.Web.Infrastructure.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\PagedList.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\PagedList.Mvc.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Helpers.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Mvc.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Optimization.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Razor.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\WebGrease.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\EntityFramework.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\EntityFramework.SqlServer.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\ImageResizer.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\PagedList.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\PagedList.Mvc.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Helpers.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Mvc.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Optimization.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.Razor.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Deployment.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\System.Web.WebPages.Razor.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Antlr3.Runtime.pdb
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Newtonsoft.Json.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.ApplicationInsights.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.DependencyCollector.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.WindowsServer.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\bin\Microsoft.AI.Web.xml
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.AssemblyReference.cache
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CoreCompileInputs.cache
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\obj\Debug\KProj.csproj.CopyComplete
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\obj\Debug\KProj.dll
+E:\BackEnd___Organize it\Second\CV_Projects\KidsCourses\KProj\KProj\obj\Debug\KProj.pdb

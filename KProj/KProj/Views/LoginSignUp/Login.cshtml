@@ -1,0 +1,147 @@
+﻿@model KProj.Models.LoginVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- First Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Descripition -->
+    <meta name="description" content="Learning Kids Programming">
+    <!-- Application-Name -->
+    <meta name="application-name" content="M_Kids">
+    <!-- Author Name -->
+    <meta name="author" content="">
+    <!-- Page Title -->
+    <title>signin</title>
+    <!-- Favicon -->
+    <link rel="icon" href="~/Content/Assets/images/logo/favicon.ico">
+    <!--BootStrap -->
+    <link rel="stylesheet" href="~/Content/Assets/css/bootstrap.min.css">
+ 
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="~/Content/Assets/css/font-awesome.css">
+    <!--[if lt IE 9>
+        <script src="~/Content/Assets/Js/html5shiv.min.js"></script>
+        <script src="~/Content/Assets/css/Normalize.css"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/Content/Assets/css/main.css">
+</head>
+
+<body>
+
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+            <div class="col-lg-5 col-12 order-2 order-lg-1 bg-color">
+                <div class="login">
+                    <div class="logo-site">
+                        <a href="#" target="_self" onclick='document.location ="@Url.Action("Index","Home" )"'>
+                            <img src="~/Content/Assets/images/logo/favicon.ico" class="align-items-center">
+                        </a>
+                    </div>
+                    <h3>We Are Mentor</h3>
+                    @if (ViewBag.Message != null)
+    {
+                <p class="alert alert-danger" > @ViewBag.Message </p>
+}
+else
+{
+                <p>Welcome back, please login to your account.</p>
+
+}
+
+                    @*<form action="" enctype="multipart/form-data">*@
+                    @using (Html.BeginForm())
+    {
+                @Html.AntiForgeryToken()
+                <div>
+                    <label>Email *</label>
+                    <div class="username-input">
+                        @*<input type="text"  placeholder="UserName" autofocus>*@
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "", placeholder = "UserName" } })
+                        <span><i class="fa fa-user"></i></span>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Password *</label>
+                    <div class="password-input">
+                        @*<input type="password" placeholder="Password">*@
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "", placeholder = "Password" } })
+                        <span><i class="fa fa-lock"></i></span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="remember d-inline-block">
+                        @*<input type="checkbox" name="">*@
+                        @Html.EditorFor(model => model.RememberMe)
+                        Remember Me
+                    </div>
+                    <a href="#" onclick='document.location ="@Url.Action("ForgetPass","LoginSignUp" )"' class="forget">Forget Password ?</a>
+                </div>
+
+                <div style="text-align: center">
+                    <input type="submit" value="Sign In">
+                </div>
+
+                <div class="signup">
+                    <span>Don't have an account ?</span>
+                    <a href="#" onclick='document.location ="@Url.Action("Register","LoginSignUp" )"'>Sign Up</a>
+                </div>
+
+
+}
+
+                    @*</form>*@
+                </div><!-- End Login -->
+                @if (ViewBag.error !=null)
+                {
+                <p class="alert alert-danger">  @ViewBag.error </p>
+                }
+
+            </div><!-- End Column -->
+
+            <div class="col-lg-7 col-12  order-1 order-lg-2 bg-color1">
+                <div class="col-7 mx-auto">
+                    <img src="~/Content/Assets/images/register/login.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Loader -->
+
+    <div class="preloader" id="preloader">
+        <div class="loader loader-1">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Jquery ==== -->
+    <script src="~/Content/Assets/Js/jquery-3.3.1.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/Assets/Js/bootstrap.min.js"></script>
+    <!-- NiceScroll -->
+    <script src="~/Content/Assets/Js/jquery.nicescroll.js"></script>
+    <!-- Wow -->
+    <script src="~/Content/Assets/Js/wow.min.js"></script>
+    <!-- Plugins -->
+    <script src="~/Content/Assets/Js/plugin.js"></script>
+    <script>
+        nicescroll();
+    </script>
+</body>
+
+</html>

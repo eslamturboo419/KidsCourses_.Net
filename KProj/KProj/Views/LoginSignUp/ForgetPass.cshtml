@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "ForgetPass";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+
+        <div class="col-lg-5 col-12 order-2 order-lg-1 bg-color">
+            <div class="login forget">
+                <div class="logo-site">
+                    <a href="index.html" target="_self">
+                        <img src="~/Content/Assets/images/logo/favicon.ico" class="align-items-center">
+                    </a>
+                </div>
+                <h3>We Are Mentor</h3>
+
+                @if (ViewBag.Message != null)
+    {
+            <p class="alert alert-info"> @ViewBag.Message </p>
+}
+else
+{
+            <p>
+                Please enter your username or email address.
+                You will receive a link to create a new password via email.
+            </p>
+}
+
+
+
+                @*<form action="" enctype="multipart/form-data">*@
+
+                @using (Html.BeginForm())
+    {
+                    @Html.AntiForgeryToken()
+            <div>
+                <label>Username or Email Address *</label>
+                <div class="username-input">
+                    @*<input type="text" placeholder="Email" autofocus>*@
+                    @Html.TextBox("email", "", new { @class = " ", placeholder = "Email" })
+                    <span><i class="fa fa-user"></i></span>
+                </div>
+            </div>
+
+            <div style="text-align: center">
+                <input type="submit" value="Get New Password">
+            </div>
+}
+
+                @*</form>*@
+            </div><!-- End Login -->
+        </div><!-- End Column -->
+
+        <div class="col-lg-7 col-12  order-1 order-lg-2 bg-color1">
+            <div class="col-7 mx-auto">
+                <img src="~/Content/Assets/images/register/login.svg">
+ 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Loader -->
+
+<div class="preloader" id="preloader">
+    <div class="loader loader-1">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+</div>
+

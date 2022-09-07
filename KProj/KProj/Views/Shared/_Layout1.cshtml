@@ -1,0 +1,273 @@
+﻿@*
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+ 
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+ *@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Meta tags-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- First Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Descripition -->
+    <meta name="description" content="Learning Kids Programming">
+    <!-- Application-Name -->
+    <meta name="application-name" content="M_Kids">
+    <!-- Author Name -->
+    <meta name="author" content="">
+    <!-- Page Title -->
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Favicon -->
+    <link rel="icon" href="~/Content/Assets/images/logo/favicon.ico">
+    <!--BootStrap -->
+    <link rel="stylesheet" href="~/Content/Assets/css/bootstrap.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/Content/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/Assets/css/owl.theme.default.min.css">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="~/Content/Assets/css/font-awesome.css">
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="~/Content/Assets/css/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="~/Content/Assets/css/animate.css">
+    <!-- Plyr -->
+    <link rel="stylesheet" href="~/Content/Assets/css/plyr.css">
+    <!--[if lt IE 9>
+        <script src="~/Content/Assets/Js/html5shiv.min.js"></script>
+        <script src="~/Content/Assets/css/Normalize.css"></script>
+    <![endif]-->
+
+
+
+    <link rel="stylesheet" href="~/Content/Assets/css/main.css">
+    <link href="~/Content/Assets/autocomplete.css" rel="stylesheet" />
+
+    <link href="~/Content/Assets/jquery-ui.theme.css" rel="stylesheet" />
+    <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/NewFolder1/venobox.css" type="text/css" media="screen" />
+
+
+</head>
+
+<body>
+
+    <header class="navbar-header">
+        <div class="container d-flex">
+
+            <div class="menu-left">
+
+                <i class="fa fa-bars menu-left-dropdown"></i>
+
+                <div class="col-sm-4 col-12 column">
+                    <div class="menu-left-content">
+                        <ul>
+                            <li>
+                                <a href="#" target="_self" onclick='document.location ="@Url.Action("Index","Home" )"'>
+                                    <i class="fa fa-asterisk"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" onclick='document.location ="@Url.Action("Index","Courses" )"' target="_self">
+                                    <i class="fa fa-asterisk"></i>
+                                    All Courses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self">
+                                    <i class="fa fa-asterisk"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_self" onclick='document.location ="@Url.Action("ContactUs","Home" )"'>
+                                    <i class="fa fa-asterisk"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+
+                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    <a href="#" target="_self" onclick='document.location ="@Url.Action("Index","AdminCourses" )"'>
+                                        <i class="fa fa-square"></i>
+                                        Manage Courses
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_self" onclick='document.location ="@Url.Action("Index","AdminManageUsers" )"'>
+                                        <i class="fa fa-square"></i>
+                                        Manage Users
+                                    </a>
+                                </li>
+
+
+
+                            }
+
+                        </ul>
+                    </div>
+                </div><!-- End Column -->
+            </div><!-- End Menu Left -->
+
+            <div class="site-logo mx-auto mr-auto">
+                <a href="#" onclick='document.location ="@Url.Action("Index","Home" )"'>
+                    <img src="~/Content/Assets/images/logo/favicon.ico" alt="Site Logo">
+                    <span>.Kids</span>
+                </a>
+            </div>
+
+
+            <div class="menu-right d-flex">
+
+                <div class="search-content d-sm-block d-none">
+                    <i class="fa fa-search search-button"></i>
+                    <div class="col-12">
+                        <form action="" name="form" enctype="multipart/form-data">
+                            <input type="search" placeholder="Search ...">
+                            <input type="button" value="Search">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="site-enter">
+                    <div class="site-enter-button d-sm-none d-block">
+                        <i class="fa fa-bars"></i>
+                        <div class="position-absolute column">
+                            <div class="col-12">
+                                <div class="content-show d-flex">
+                                    @if (!User.Identity.IsAuthenticated)
+                                    {
+                                        <a href="#" onclick='document.location ="@Url.Action("Login","LoginSignUp" )"' target="_self">
+                                            <i class="fa fa-user"></i>
+                                            <span>Login</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" onclick='document.location ="@Url.Action("PersonalData","Account" , new { Email=User.Identity.Name})"' target="_self">
+                                            <i class="fa fa-info"></i>
+                                            <span>Personal Data</span>
+                                        </a>
+                                    }
+
+
+
+                                    <a href="#" class="mr-auto mx-auto">
+                                        <i class="fa fa-search"></i>
+                                        <div class="col-12 form-search">
+                                            <form action="" name="form" enctype="multipart/form-data">
+                                                <input type="search" placeholder="Search ...">
+                                                <input type="button" value="Search">
+                                            </form>
+                                        </div>
+                                    </a>
+
+                                    @if (!User.Identity.IsAuthenticated)
+                                    {<a href="#" onclick='document.location ="@Url.Action("Register","LoginSignUp" )"' target="_self" class="float-right">
+                                            <i class="fa fa-lock"></i>
+                                            <span>Sign Up</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" onclick='document.location ="@Url.Action("logOut","LoginSignUp" )"' target="_self" class="float-right">
+                                            <i class="fa fa-user"></i>
+                                            <span>logOut</span>
+                                        </a>
+                                    }
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="logo-site d-sm-block d-none">
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <a href="#" onclick='document.location ="@Url.Action("Login","LoginSignUp" )"' target="_self">
+                                <i class="fa fa-user"></i>
+                                <span>Login</span>
+                            </a>
+                            <span>/</span>
+
+                            <a href="#" onclick='document.location ="@Url.Action("Register","LoginSignUp" )"' target="_self">
+
+                                <i class="fa fa-lock"></i>
+                                <span>Sign Up</span>
+                            </a>
+                        }
+                        else
+
+                        {
+                            <a href="#" onclick='document.location ="@Url.Action("PersonalData","Account" , new { Email=User.Identity.Name} )"' target="_self">
+                                <i class="fa fa-info"></i>
+                                <span> Personal  Data </span>
+                            </a>
+                            <span>/</span>
+
+                            <a href="#" onclick='document.location ="@Url.Action("logOut","LoginSignUp" )"' target="_self">
+                                <i class="fa fa-user"></i>
+                                <span>logOut</span>
+                            </a>
+
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div><!-- End Container -->
+    </header><!-- End Header -->
+    <!--=============== Start Home Slider ==================-->
+
+    @RenderBody()
+
+    <!--============== End Home Slider ==================-->
+    <!-- Jquery ==== -->
+    <script src="~/Content/Assets/Js/jquery-3.3.1.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Content/Assets/Js/bootstrap.min.js"></script>
+    <!-- NiceScroll -->
+    <script src="~/Content/Assets/Js/jquery.nicescroll.js"></script>
+    <!-- Wow -->
+    <script src="~/Content/Assets/Js/wow.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="~/Content/Assets/Js/owl.carousel.min.js"></script>
+    @*  particles  *@
+    <script src="~/Content/Assets/Js/particles.min.js"></script>
+    @* App *@
+    <script src="~/Content/Assets/Js/App.js"></script>
+    <!-- Plugins -->
+    <script src="~/Content/Assets/jquery-ui.js"></script>
+
+    <script src="~/Content/jquery.rateyo.min.js"></script>
+    <script src="~/Content/Assets/Js/plugin.js"></script>
+
+    <script type="text/javascript" src="~/NewFolder1/venobox.min.js"></script>
+
+    <script src="~/Content/Assets/datepicker/datepicker.min.js"></script>
+
+
+    <script>
+        nicescroll();
+        home_slider();
+    </script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+
+

@@ -1,0 +1,292 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<KProj.Models.ShowCourses>
+
+
+
+@*@model IEnumerable<KProj.Models.ShowCourses>*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        Here();
+    });
+        function Here() {
+        //   https://jqueryui.com/
+        $("#txtsearch").autocomplete({
+            source: '@Url.Action("GetAllData","Courses")',
+
+        }); }
+                            
+      
+</script>
+
+<!-- Start Courses Content -->
+<div class="courses-show">
+    <div id="particles-js"></div>
+
+    <div class="show-content">
+        <div class="container">
+            <h3>
+                All Courses
+            </h3>
+            <ul class="content-nav">
+                <li>
+                    <a href="#" onclick='document.location ="@Url.Action("Index","Home" )"' target="_self">
+                        <i class="fa fa-home"></i> Home
+                    </a>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa fa-long-arrow-right"></i> Courses List
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Courses Show -->
+<!-- Start Courses Content -->
+
+<div class="all-courses-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="courses-top-bar">
+
+                    <div class="courses-results">
+                        <span>Showing @ViewBag.count  results</span>
+                    </div>
+
+                    <ul class="nav courses-tab" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#">
+                                <i class="fa fa-th-large"></i>
+                            </a>
+                        </li>
+                        @*<li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile">
+                                    <i class="fa fa-list"></i>
+                                </a>
+                            </li>*@
+                    </ul>
+
+                    <div class="courses-search d-none d-md-block">
+                        @*<form class="courses-form">*@
+                        @using (Html.BeginForm("Index", "Courses", FormMethod.Post, new { @class = "courses-form" }))
+    {
+                    @Html.TextBox("Search", null, htmlAttributes: new { id = "txtsearch", placeholder = "Search our courses" })
+                    @*<input type="submit" value="Search" /><i class="fa fa-search"></i>*@
+                    <button type="submit" >
+                        <i class="fa fa-search"></i>
+                    </button>
+}
+
+                        @*<input placeholder="Search our courses" type="text">
+        <button type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+        </form>*@
+                    </div>
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <div class="row" id="courses-wrapper">
+
+                            @{ int i = 1; }
+                            @foreach (var item in Model)
+    {
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="coures-wrapper text-center mb-30">
+                                <div class="coures-img">
+                                    <a href="#" onclick='document.location ="@Url.Action("DetailsCourse","Courses", new { id=item.Id } )"'>
+                                        <img src="~/Content/ImageUploaded/@item.Image" alt="">
+                                    </a>
+                                </div>
+                                <div class="courses-text">
+                                    <h4><a href="#">  @item.NameOfCourse </a></h4>
+                                    <div class="instr-name">
+                                        @item.Trainner
+                                    </div>
+                                    <div class="feedback">
+
+
+                                        <div id="@item.NameOfCourse"></div>
+                                        <script>
+                                                $(function () {
+                                                    $('#@("rating"+i)').rateYo({
+                                                        rating:  @item.Rating ,
+                                                        readOnly: true , ratedFill: "#08c108"
+                                                    });
+                                                });
+                                        </script>
+                                        <div id="@("rating"+i)"></div>
+                                        <span>@item.Rating</span>
+                                        <span>( @item.NumberOfUserReviews ) </span>
+                                    </div>
+                                    <div class="course-meta">
+                                        <span><i class="fa fa-bookmark"></i>@item.NumberOfLessons</span>
+                                        <span><i class="fa fa-clock-o"></i>@item.TimeOfCourse</span>
+                                        @*<span><i class="fa fa-users"></i> 36</span>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                i++;
+                            }
+
+
+                        </div>
+                        <!-- End Row -->
+                    </div>
+
+                    <!-- End Tab Panel -->
+                </div>
+                <!-- End Tab Content -->
+                <!---  For paged list -->
+                <div class="col-12">
+
+                    @Html.PagedListPager(Model, Page => Url.Action("index", new
+    { Page, Search = Request.QueryString["Search"] }), new PagedListRenderOptions()
+    {
+        Display = PagedListDisplayMode.Always,
+        DisplayPageCountAndCurrentLocation = true
+    })
+
+
+                </div>
+
+            </div>
+            <!-- End Column -->
+
+            @*<div class="col-lg-3 col-12">
+
+                <div class="category-list sidebar-box" id="category-list">
+                    <h3><a href="#All" data-filter="all">All Categories</a></h3>
+                    <ul>
+
+                        <li>
+                            <a data-collapse="collapse" href="#collapse1" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
+                                Web Development
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="collapse" id="collapse1" data-parent="#category-list" style="padding-left: 22px;">
+                                <a href="#html" data-filter=".html">Html</a>
+                                <a href="#css" data-filter=".css">css</a>
+                                <a href="#javascript" data-filter=".javascript">JavaScript</a>
+                                <a href="#BootStrap" data-filter=".Bootstrap">BootStrap</a>
+                                <a href="#python" data-filter=".python">python</a>
+                                <a href="#c++" data-filter=".c++">c++</a>
+
+                            </div>
+                        </li>
+
+                        <div class="widget mb-45">
+                            <h3 class="widget-course-title">latest Posts</h3>
+                            <ul class="latest-Posts">
+
+                                <li class="d-flex">
+                                    <div class="posts-image">
+                                        <a href="single-course.html"><img src="~/Content/Assets/images/cources/sliderimg.png" alt=""></a>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="single-course.html">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="posts-image">
+                                        <a href="single-course.html"><img src="~/Content/Assets/images/cources/sliderimg.png" alt=""></a>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="single-course.html">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="posts-image">
+                                        <a href="single-course.html"><img src="~/Content/Assets/images/cources/sliderimg.png" alt=""></a>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="single-course.html">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget mb-30">
+                            <h3 class="widget-course-title">Upcoming events</h3>
+                            <ul class="latest-Posts">
+
+                                <li class="d-flex">
+                                    <div class="uncoming-event">
+                                        <span class="date">10</span>
+                                        <span class="month">april</span>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="#">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+
+                                <li class="d-flex">
+                                    <div class="uncoming-event">
+                                        <span class="date">10</span>
+                                        <span class="month">april</span>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="#">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+
+                                <li class="d-flex">
+                                    <div class="uncoming-event">
+                                        <span class="date">10</span>
+                                        <span class="month">april</span>
+                                    </div>
+                                    <div class="posts-body">
+                                        <h4><a href="#">The Complete React Web Developer Course</a></h4>
+                                        <span>October 7, 2018</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <h3 class="widget-course-title">Popular Tags</h3>
+                            <ul class="tag">
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">Unique</a></li>
+                                <li><a href="#">html</a></li>
+                                <li><a href="#">fantastic</a></li>
+                                <li><a href="#">Template</a></li>
+                                <li><a href="#">Wordpress</a></li>
+                                <li><a href="#">Ideas</a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+
+<!-- Loader -->
+
+<div class="preloader" id="preloader">
+    <div class="loader loader-1">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+    </div>
+</div>

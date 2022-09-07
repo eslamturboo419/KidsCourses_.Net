@@ -1,0 +1,48 @@
+﻿@model IEnumerable<KProj.Models.Classes.VideosUploaded>
+
+@{
+    ViewBag.Title = "ShowVideos";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/NewFolder1/style.css">
+@*<link href="~/Content/Assets/css/font-awesome.css" rel="stylesheet" />*@
+
+<div class="wrapper">
+
+    <!-- Content -->
+    <section class="content__section">
+        <div class="playlist__one">
+            <h4 class="playlist__title"></h4>
+            <div class="videos">
+
+                @foreach (var item in Model)
+                {
+                    <div class="video" style="background-image: url(images/image-1.jpg)">
+                        <a class="venobox" data-autoplay="true" data-vbtype="video" href="@item.SourseVideo" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                    </div>
+                }
+
+
+
+            </div>
+        </div>
+
+    </section><!-- End Content Section -->
+</div><!-- End Wrapper -->
+@*<script type="text/javascript" src="~/NewFolder1/jquery-3.4.1.min.js"></script>*@
+
+<script src="~/Content/Assets/Js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="~/NewFolder1/venobox.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.venobox').venobox({
+            closeColor: '#f4f4f4',
+            spinColor: '#f4f4f4',
+            arrowsColor: '#f4f4f4',
+            closeBackground: '#17191D',
+            overlayColor: 'rgba(23,25,29,0.8)'
+        });
+    });
+</script>
